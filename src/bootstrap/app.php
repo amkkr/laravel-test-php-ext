@@ -115,4 +115,5 @@ $app->router->group([
 
 $app->register(Illuminate\Redis\RedisServiceProvider::class);
 $app->register(Laravel\Tinker\TinkerServiceProvider::class);
+
 return $app;

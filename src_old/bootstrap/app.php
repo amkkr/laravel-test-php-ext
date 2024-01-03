@@ -91,9 +91,10 @@ $app->configure('app');
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+$app->register(Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class); //追記
 
 /*
 |--------------------------------------------------------------------------
@@ -114,4 +115,5 @@ $app->router->group([
 
 $app->register(Illuminate\Redis\RedisServiceProvider::class);
 $app->register(Laravel\Tinker\TinkerServiceProvider::class);
+
 return $app;
